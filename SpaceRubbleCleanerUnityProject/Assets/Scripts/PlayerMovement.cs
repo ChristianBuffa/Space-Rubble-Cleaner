@@ -10,13 +10,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float playerRotation;
 
-    private CharacterController controller;
+    private Rigidbody rb;
 
     private Vector2 playerInput;
 
     private void Start()
     {
-        controller =  GetComponent<CharacterController>();        
+        rb =  GetComponent<Rigidbody>();        
     }
 
     private void Update()
@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Movement()
     {
-        controller.Move(transform.forward * playerInput.y * playerSpeed * Time.deltaTime);
+        rb.AddForce(transform.forward * playerInput.y * playerSpeed * Time.deltaTime, ForceMode.Impulse);
         transform.Rotate(transform.up, playerRotation * playerInput.x * Time.deltaTime);
     }
 
