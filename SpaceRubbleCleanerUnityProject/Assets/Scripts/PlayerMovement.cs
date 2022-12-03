@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Movement()
     {
-        rb.AddForce(transform.forward * playerInput.y * playerSpeed * Time.deltaTime, ForceMode.Impulse);
+        rb.AddForce(transform.forward * playerInput.y * playerSpeed * Time.deltaTime, ForceMode.VelocityChange);
         transform.Rotate(transform.up, playerRotation * playerInput.x * Time.deltaTime);
     }
 
