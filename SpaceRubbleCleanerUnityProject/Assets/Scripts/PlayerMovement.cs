@@ -1,22 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField] 
+    private float maxFuel;
     [SerializeField]
     private float playerSpeed;
     [SerializeField]
     private float playerRotation;
 
     private Rigidbody rb;
+    private float currentFuel;
 
     private Vector2 playerInput;
 
     private void Start()
     {
-        rb =  GetComponent<Rigidbody>();        
+        rb =  GetComponent<Rigidbody>();
+        currentFuel = maxFuel;
     }
 
     private void Update()
