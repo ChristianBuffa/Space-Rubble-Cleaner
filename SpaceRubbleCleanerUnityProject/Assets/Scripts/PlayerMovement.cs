@@ -1,5 +1,5 @@
+using UnityEditor;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
@@ -28,27 +28,29 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        ManageInput();
         Movement();
     }
 
     private void Movement()
     {
         fuelSlider.value = currentFuel / maxFuel;
-        
-        rb.AddForce(transform.forward * playerInput.y * playerSpeed * Time.deltaTime, ForceMode.VelocityChange);
-        transform.Rotate(transform.up, playerRotation * playerInput.x * Time.deltaTime);
-    }
 
-    private void OnMovement(InputValue value)
-    {
         if (currentFuel > 0)
         {
-            currentFuel -= fuelBurnRate * Time.deltaTime;
-            playerInput = value.Get<Vector2>();
+            rb.AddForce(transform.forward * playerInput.y * playerSpeed * Time.deltaTime, ForceMode.VelocityChange);
+            transform.Rotate(transform.up, playerRotation * playerInput.x * Time.deltaTime);
         }
-        else
+    }
+
+    private void ManageInput()
+    {
+        playerInput.y = Input.GetAxis("Vertical");  
+        playerInput.x = Input.GetAxis("Horizontal");
+
+        if (Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0)
         {
-            playerInput = Vector2.zero;
+            currentFuel -= fuelBurnRate * Time.deltaTime;
         }
     }
 }
