@@ -5,6 +5,8 @@ using UnityEngine.UI;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] 
+    private float maxSpeed;
+    [SerializeField] 
     private float maxFuel;
     [SerializeField] 
     private float fuelBurnRate;
@@ -48,6 +50,15 @@ public class PlayerMovement : MonoBehaviour
         playerInput.y = Input.GetAxis("Vertical");  
         playerInput.x = Input.GetAxis("Horizontal");
 
+        if (rb.velocity.z > maxSpeed)
+        {
+            rb.velocity = new Vector3(rb.velocity.x, 0, maxSpeed);
+        }
+        if (rb.velocity.x > maxSpeed)
+        {
+            rb.velocity = new Vector3(maxSpeed, 0, rb.velocity.z);
+        }
+        
         if (Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0)
         {
             currentFuel -= fuelBurnRate * Time.deltaTime;

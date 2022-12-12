@@ -65,9 +65,11 @@ public class AttractorWithAreas : MonoBehaviour
 
     private void OnDrawGizmos()
     {
+        Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, areaOneRadius);
+        Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, areaTwoRadius);
-        Gizmos.DrawWireSphere(transform.position, areaThreeRadius);
         Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, areaThreeRadius);
     }
 }
