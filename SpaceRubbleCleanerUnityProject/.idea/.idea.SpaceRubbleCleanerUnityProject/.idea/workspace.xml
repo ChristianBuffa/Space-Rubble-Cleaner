@@ -12,6 +12,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AttractedObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AttractorWithAreas.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/InputModules/BaseInput.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -93,7 +94,7 @@
       <workItem from="1670059489853" duration="4236000" />
       <workItem from="1670791348204" duration="912000" />
       <workItem from="1670792859412" duration="1174000" />
-      <workItem from="1670843328275" duration="1647000" />
+      <workItem from="1670843328275" duration="3540000" />
     </task>
     <servers />
   </component>

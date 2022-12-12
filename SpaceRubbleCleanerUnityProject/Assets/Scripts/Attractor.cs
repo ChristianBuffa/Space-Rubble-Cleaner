@@ -6,10 +6,11 @@ using UnityEngine;
 public class Attractor : MonoBehaviour
 {
     [SerializeField]
+    private float attractorMass;
+    [SerializeField]
     private float attractionDistance;
 
     private float distanceFromAttractor;
-    
     private Rigidbody rb;
     
     const float G = 6.674f;
@@ -39,7 +40,7 @@ public class Attractor : MonoBehaviour
         Vector3 direction = rb.position - rbToAttract.position;
         distanceFromAttractor = direction.magnitude;
 
-        float forceMagnitude = G * (rb.mass * rbToAttract.mass) / distanceFromAttractor;
+        float forceMagnitude = G * (attractorMass * rbToAttract.mass) / distanceFromAttractor;
         Vector3 force = direction.normalized * forceMagnitude;
 
         if (distanceFromAttractor < attractionDistance)
