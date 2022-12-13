@@ -4,14 +4,14 @@ using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] 
+    [SerializeField] [Tooltip("Forza massima raggiungibile dal Rigidbody")]
     private float maxSpeed;
     [SerializeField] 
     private float maxFuel;
     [SerializeField] 
     private float fuelBurnRate;
-    [SerializeField]
-    private float playerSpeed;
+    [SerializeField][Tooltip("Forza applicata al Rigidbody")]
+    private float playerSpeed;  
     [SerializeField]
     private float playerRotation;
     [SerializeField] 
