@@ -37,7 +37,6 @@ public class CamBehaviour : MonoBehaviour
         speedNormalized = speed / maxSpeed;
         offset = curve.Evaluate(speedNormalized);
         distance = yMax * offset;
-        distance = yMax * offset;
         cameraMain.position = new Vector3(target.transform.position.x , yInit + distance, target.transform.position.z);
     }
 }

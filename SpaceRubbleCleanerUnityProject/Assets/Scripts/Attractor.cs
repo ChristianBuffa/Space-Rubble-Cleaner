@@ -1,16 +1,20 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class Attractor : MonoBehaviour
 {
+    [SerializeField] 
+    private AnimationCurve curve;
     [SerializeField]
     private float attractorMass;
     [SerializeField]
     private float attractionDistance;
 
     private float distanceFromAttractor;
+    private float curveModifier;
     private Rigidbody rb;
     
     const float G = 6.674f;
@@ -40,8 +44,10 @@ public class Attractor : MonoBehaviour
         Vector3 direction = rb.position - rbToAttract.position;
         distanceFromAttractor = direction.magnitude;
 
+        curveModifier = curve.Evaluate(distanceFromAttractor / attractionDistance);
+        
         float forceMagnitude = G * (attractorMass * rbToAttract.mass) / distanceFromAttractor;
-        Vector3 force = direction.normalized * forceMagnitude;
+        Vector3 force = direction.normalized * curveModifier * attractorMass;
 
         if (distanceFromAttractor < attractionDistance)
         {
