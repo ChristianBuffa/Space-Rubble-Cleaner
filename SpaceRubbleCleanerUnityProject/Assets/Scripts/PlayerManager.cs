@@ -7,8 +7,19 @@ using UnityEngine.UI;
 
 public class PlayerManager : MonoBehaviour
 {
-    [SerializeField] private TMP_Text rubbishText;
+    [SerializeField] 
+    private TMP_Text rubbishText;
+    [SerializeField] 
+    private Canvas menuCanvas;
+    [SerializeField] 
+    private Canvas uiCanvas;
+    
     private int collectedRubbish;
+
+    private void Start()
+    {
+        rubbishText.text = "Collected Rubbish " + collectedRubbish;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -22,6 +33,8 @@ public class PlayerManager : MonoBehaviour
         if (other.gameObject.tag == "planet")
         {
             gameObject.SetActive(false);
+            uiCanvas.gameObject.SetActive(false);
+            menuCanvas.gameObject.SetActive(true);
         }
     }
 }

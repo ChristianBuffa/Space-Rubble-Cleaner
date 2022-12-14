@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Prototype Scene.unity
+    path: Assets/Scenes/SceneWithGravityAttractors.unity
     guid: af6fa181d1f71aa4094a8dd7862e40d6
+  - enabled: 1
+    path: Assets/Scenes/SceneWithAreaAttractors.unity
+    guid: ff535e3124c1a0d4ea3c8ad399485e60
   m_configObjects: {}
