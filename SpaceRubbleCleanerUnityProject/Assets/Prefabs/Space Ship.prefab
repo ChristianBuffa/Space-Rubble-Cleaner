@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7147246754683254822}
   - component: {fileID: 7147246754683254827}
   - component: {fileID: 7147246754683254823}
+  - component: {fileID: -6421181395899675587}
   m_Layer: 0
   m_Name: Space Ship
   m_TagString: Untagged
@@ -96,6 +97,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
+--- !u!114 &-6421181395899675587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3788279391568199313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1cdbdf43abb59b4dae2c7c1488002a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6246991144210285420
 GameObject:
   m_ObjectHideFlags: 0

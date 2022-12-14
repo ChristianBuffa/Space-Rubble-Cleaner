@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class Attractor : MonoBehaviour
 {
-    [SerializeField] 
     private AnimationCurve curve;
     [SerializeField]
     private float attractorMass;
@@ -44,10 +43,10 @@ public class Attractor : MonoBehaviour
         Vector3 direction = rb.position - rbToAttract.position;
         distanceFromAttractor = direction.magnitude;
 
-        curveModifier = curve.Evaluate(distanceFromAttractor / attractionDistance);
-        
+        //curveModifier = curve.Evaluate(distanceFromAttractor / attractionDistance);
         float forceMagnitude = G * (attractorMass * rbToAttract.mass) / distanceFromAttractor;
-        Vector3 force = direction.normalized * curveModifier * attractorMass;
+        
+        Vector3 force = direction.normalized * forceMagnitude;
 
         if (distanceFromAttractor < attractionDistance)
         {
