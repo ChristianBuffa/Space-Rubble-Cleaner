@@ -668,7 +668,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7910057682240145265, guid: ad86c298e7672af43a3ecf74b2dea762, type: 3}
       propertyPath: yMax
-      value: 150
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 7910057682240145265, guid: ad86c298e7672af43a3ecf74b2dea762, type: 3}
       propertyPath: target
@@ -720,7 +720,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7910057682240145267, guid: ad86c298e7672af43a3ecf74b2dea762, type: 3}
       propertyPath: far clip plane
-      value: 2000
+      value: 10000
       objectReference: {fileID: 0}
     - target: {fileID: 7910057682240145269, guid: ad86c298e7672af43a3ecf74b2dea762, type: 3}
       propertyPath: m_Name

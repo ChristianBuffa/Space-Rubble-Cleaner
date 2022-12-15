@@ -638,6 +638,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: planet
       objectReference: {fileID: 0}
+    - target: {fileID: 3096836256270390263, guid: 6c7803a37cbf2d04492aa0d6e030181d, type: 3}
+      propertyPath: attractorMass
+      value: 3000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c7803a37cbf2d04492aa0d6e030181d, type: 3}
 --- !u!4 &445376541 stripped
@@ -1865,6 +1869,10 @@ PrefabInstance:
       value: planet
       objectReference: {fileID: 0}
     - target: {fileID: 3096836256270390263, guid: 6c7803a37cbf2d04492aa0d6e030181d, type: 3}
+      propertyPath: attractorMass
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3096836256270390263, guid: 6c7803a37cbf2d04492aa0d6e030181d, type: 3}
       propertyPath: attractionDistance
       value: 500
       objectReference: {fileID: 0}
@@ -2073,6 +2081,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 50916116}
     m_Modifications:
     - target: {fileID: 7910057682240145265, guid: ad86c298e7672af43a3ecf74b2dea762, type: 3}
+      propertyPath: yMax
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910057682240145265, guid: ad86c298e7672af43a3ecf74b2dea762, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 6314806470483264031}
@@ -2119,6 +2131,10 @@ PrefabInstance:
     - target: {fileID: 7910057682240145266, guid: ad86c298e7672af43a3ecf74b2dea762, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910057682240145267, guid: ad86c298e7672af43a3ecf74b2dea762, type: 3}
+      propertyPath: far clip plane
+      value: 10000
       objectReference: {fileID: 0}
     - target: {fileID: 7910057682240145269, guid: ad86c298e7672af43a3ecf74b2dea762, type: 3}
       propertyPath: m_Name
